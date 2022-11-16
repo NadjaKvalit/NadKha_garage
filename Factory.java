@@ -9,7 +9,6 @@ public class Factory {
     String newName;
     int newYearOfManufacturing;
     Scanner scanner = new Scanner(System.in);
-    public static String thereIsError;
 
     public void registrationVehiclesParameters() {
         System.out.print("Your vehicle's name is: ");
@@ -19,6 +18,7 @@ public class Factory {
         System.out.print("The vehicle's color is: ");
         newColor = scanner.next();
     }
+
     public Vehicle registrationNewVehicle() {
         System.out.println("First, let's register your vehicle.\nWhat type of vehicle do you have?: ");
         System.out.print(TypeVehicle.AIRPLANE + ": 1; " + TypeVehicle.BOAT + ": 2; " + TypeVehicle.BUS + ": 3; " + TypeVehicle.CAR + ": 4; " + TypeVehicle.MOTORCYCLE + ": 5\n");
