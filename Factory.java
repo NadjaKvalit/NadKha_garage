@@ -3,16 +3,19 @@ package garage;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+    //Bra att du har använt Factory Design Pattern!
+    //https://www.geeksforgeeks.org/factory-method-design-pattern-in-java/
+
 public class Factory {
     String newRegNum;
     String newColor;
     String newName;
     int newYearOfManufacturing;
-    Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in); //@FIXME: lägg till .useDelimiter("\n"); för att kunna ha namn med mellanslag
 
     public void registrationVehiclesParameters() {
         System.out.print("Your vehicle's name is: ");
-        newName = scanner.next().toUpperCase();
+        newName = scanner.next();
         System.out.print("Your regNum is: ");
         newRegNum = scanner.next();
         System.out.print("The vehicle's color is: ");

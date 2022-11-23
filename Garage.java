@@ -102,12 +102,17 @@ public class Garage {
 
         int driveOutPlace = 0;
         String choiceDriveOutTheVehicle = scanner.next();
+
+        //TODO: titta vad IntelliJ tipsar om
         switch (choiceDriveOutTheVehicle) {
             case "1":
                 getListOfParkedVehicleTypes();
                 System.out.println("Did you find your vehicle? Say y/n.");
                 String choiceYesNoOnGarage = scanner.next().toUpperCase();
                 switch (choiceYesNoOnGarage) {
+
+                    //TODO: casen skulle kunna faktoreras ut, dvs. brytas ut till egna metoder som anropas,
+                    //Titta på parkInSwitch(int driveOutPlace)
                     case "Y":
                     case "YES":
                         System.out.println("What place do you want to drive out?: ");
@@ -176,6 +181,36 @@ public class Garage {
                 wrongInput = true;
         }
     }
+
+    /*
+    private boolean parkInSwitch(int driveOutPlace) {
+        boolean wrongInput = false;
+
+        System.out.println("What place do you want to drive out?: ");
+        try {
+            driveOutPlace = scanner.nextInt() - 1;
+            System.out.println("Bye. Have a nice day " + listOfParkingVehicles[driveOutPlace].name + " and welcome back! Ups, I forgot to ask.");
+            listOfParkingVehicles[driveOutPlace] = null;
+            wrongInput = false;
+        } catch (InputMismatchException i) {
+            scanner.nextLine();
+            System.err.print("Sorry, you can write only numbers in numeric fields.");
+            System.out.println("\n");
+            wrongInput = true;
+        } catch (NullPointerException n) {
+            scanner.nextLine();
+            System.err.print("Sorry, the place " + (driveOutPlace + 1) + " is empty");
+            System.out.println("\n");
+            wrongInput = true;
+        } catch (ArrayIndexOutOfBoundsException a) {
+            scanner.nextLine();
+            System.err.print("Upps, we have only " + PARKING_PLACES + " parking places in our garage");
+            System.out.println("\n");
+            wrongInput = true;
+        }
+        return wrongInput;
+    }
+    */
 
     public boolean chooseAnotherAction() {
         System.out.println("\nDo you want to choose another option? y/n?");

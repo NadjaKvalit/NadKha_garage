@@ -6,4 +6,7 @@ public class Boat extends Vehicle {
         super(name,regNum, color, yearOfManufacturing);
         this.numOfDeck=numOfDeck;
     }
+
+    //TODO: du kan lägga till getter/setter till numOfDeck, annars kan den inte nås
+
 }
