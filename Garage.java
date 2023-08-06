@@ -13,7 +13,7 @@ public class Garage {
     {
         listOfParkingVehicles[0] = new Airplane("airplane1", "AIR123", "red", 1970, 2);
         listOfParkingVehicles[2] = new Motorcycle("motorcycle1", "MOT123", "blue", 2010, 2);
-        listOfParkingVehicles[5] = new Motorcycle("motorcycle1", "MOT234", "black", 2015, 2);
+        listOfParkingVehicles[5] = new Motorcycle("motorcycle2", "MOT234", "black", 2015, 2);
         listOfParkingVehicles[8] = new Car("car1", "CAR123", "yellow", 2019, 4);
         listOfParkingVehicles[9] = new Car("car2", "CAR234", "white", 2017, 4);
         listOfParkingVehicles[12] = new Car("car3", "CAR345", "white", 2016, 6);
